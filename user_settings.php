@@ -19,7 +19,7 @@ if(!empty($_POST['email'])) {
                     <h2 class="title">Invoice System</h2>
                     <?php include('menu.php');?>
 
-                    <h3>Editing current user:  <?php echo $_SESSION['user'];?>.</h3>
+                    <h3>Editing current user:  <?php echo $_SESSION['user'];?></h3>
                     <div class="form-group">
                         <input type="text" class="form-control" name="first_name"  id="first_name" placeholder="First name" value=""">
                     </div>

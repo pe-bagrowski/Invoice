@@ -196,7 +196,6 @@ margin: 0;
 }
 @media print {
     #print_content {
-        background-color: white;
         height: 100%;
         width: 100%;
         position: fixed;
@@ -207,7 +206,7 @@ margin: 0;
         padding: 15px;
         font-size: 14px;
         line-height: 18px;
-        font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: "Source Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
     }
 }
 .searchTxt{
@@ -238,8 +237,3 @@ margin: 0;
     padding: 20px;
 	color:white;
 }
-/*.demo-heading {*/
-/*	width: 600px;*/
-/*    margin: 1% auto;*/
-/*    padding: 20px;*/
-/*}*/

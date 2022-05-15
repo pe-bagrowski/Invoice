@@ -1,6 +1,6 @@
  $(document).ready(function(){
-
 	var count = $(".itemRow").length;
+
 	$(document).on('click', '#addRows', function() {
 		count++;
 		var htmlRow = '';
@@ -13,25 +13,23 @@
 		htmlRow += '<td><input type="number" name="total[]" id="total_'+count+'" class="form-control total" autocomplete="off"></td>';
 		htmlRow += '</tr>';
 		$('#invoiceItem').append(htmlRow);
-	}); 
+	});
+
 	$(document).on('click', '#removeRows', function(){
 		$(".itemRow:checked").each(function() {
 			$(this).closest('tr').remove();
 		});
 		$('#checkAll').prop('checked', false);
-		calculateTotal();
+		total_sum();
 	});		
 	$(document).on('blur', "[id^=quantity_]", function(){
-		calculateTotal();
+		total_sum();
 	});	
 	$(document).on('blur', "[id^=price_]", function(){
-		if("[id^=price_]" < 1) {
-			alert("Price cannot be negative value!");
-		}
-		calculateTotal();
+		total_sum();
 	});	
 	$(document).on('blur', "#taxRate", function(){		
-		calculateTotal();
+		total_sum();
 	});	
 	$(document).on('blur', "#amountPaid", function(){
 		var amountPaid = $(this).val();
@@ -62,7 +60,7 @@
 		}
 	});
 });	
-function calculateTotal(){
+function total_sum(){
 	var totalAmount = 0; 
 	$("[id^='price_']").each(function() {
 		var id = $(this).attr('id');
@@ -81,12 +79,7 @@ function calculateTotal(){
 	$('#subTotal').val(parseFloat(totalAmount));	
 	var taxRate = $("#taxRate").val();
 	var subTotal = $('#subTotal').val();
-	if(quantity < 1) {
-		alert("Quantity cannot be negative value!");
-	}
-	if(price < 1) {
-		alert("Price cannot be negative value!");
-	}
+
 	if(subTotal) {
 		var taxAmount = subTotal*taxRate/100;
 		$('#taxAmount').val(taxAmount);

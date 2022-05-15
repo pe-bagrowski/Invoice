@@ -12,7 +12,7 @@ Technology used<br>
 1.PHP<br>
   +library DOMPDF - basic example of invoice from site, simply copy pasted<br>
 2.JS<br>
-3.Bootstrap - basic example as dompdf, copy-pasted basic examples<br<
+3.Bootstrap - basic example as dompdf, copy-pasted basic examples<br>
 
 
 Views and functions are based on some examples found on google<br>

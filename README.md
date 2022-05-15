@@ -6,6 +6,7 @@
   - print 
 simple invoice.<br>
  
+#SQL need to create db -  in db file<br>
 User need to be create directly on database, but user info may be changed via user settings options (excluding password)<br>
  
 Technology used<br>
